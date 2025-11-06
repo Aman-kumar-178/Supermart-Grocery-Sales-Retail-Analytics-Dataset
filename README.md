@@ -89,15 +89,3 @@ The pre-trained `.pkl` model file is hosted on Google Drive for easy access.
 > ```
 > https://drive.google.com/uc?id=1aBcDeFgHiJkLmNoPqRsTuVwXyZ123456&export=download
 > ```
-
-**To load the model in Python:**
-```python
-import pickle
-import requests
-
-url = "https://drive.google.com/uc?id=YOUR_FILE_ID&export=download"
-response = requests.get(url)
-open("supermart_sales_model.pkl", "wb").write(response.content)
-
-with open("supermart_sales_model.pkl", "rb") as file:
-    model = pickle.load(file)
